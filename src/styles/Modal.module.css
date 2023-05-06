@@ -1,0 +1,61 @@
+.container {
+  position: fixed;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 0.3em;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #999;
+}
+
+.modal__title {
+  border-radius: 0.3em 0.3em 0 0;
+  background-color: var(--primary-color);
+  padding: 0.8em 1em;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.modal__content {
+  padding: 1em;
+  font-size: 1.6rem;
+}
+
+.button__container {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  padding: 1em;
+  /* border-top: 2px solid #ddd; */
+}
+
+.close__button,
+.submit__button {
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  outline: 0;
+  font-weight: 600;
+}
+
+.close__button {
+  border: 2px solid #999;
+  color: var(--text-color-dark);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.submit__button {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+}

@@ -1,0 +1,86 @@
+.multiDropdownSelect {
+  position: relative;
+  border-radius: 0.3em;
+}
+
+.selectedOptions {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 6px 10px;
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+  transition: border-color 0.2s ease-out;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectedOptions:focus {
+  border-color: #0070c9;
+}
+
+.selectedOptions:focus::before {
+  border-left-color: #0070c9;
+}
+
+.optionsList {
+  position: absolute;
+  height: 150px;
+  overflow-y: scroll;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 0.3em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+  font-size: 13px;
+}
+
+.optionsList.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.optionsList .option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  color: #202124;
+}
+
+.optionsList .option:hover {
+  background-color: #f1f1f1;
+}
+
+.optionsList .option.selected {
+  color: #202124;
+}
+
+.dark__select .selectedOptions {
+  color: #fff !important;
+}
+
+.selectedOptions span {
+  display: inherit;
+}

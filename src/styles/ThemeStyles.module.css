@@ -1,0 +1,16 @@
+.primaryButton {
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+  outline: 0;
+  border-radius: 0.3em;
+  padding: 0.7em 1.5em;
+  background: var(--primary-color);
+  color: var(--text-color-light);
+  cursor: pointer;
+}
+
+.textLight {
+  color: var(--text-color-light);
+}

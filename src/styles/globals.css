@@ -1,0 +1,144 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap');
+
+/* Theme */
+:root {
+  --primary-color: #2b8f4e;
+  --background-color-dark: #111827;
+  --background-color-light: #fafafa;
+  --text-color-light: #fafafa;
+  --text-color-dark: #202124;
+}
+
+/* Globals */
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+button,
+a {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  background-color: transparent;
+}
+
+/* / Chrome,
+Safari,
+Edge,
+Opera / input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/ Firefox / input[type='number'] {
+  -moz-appearance: textfield;
+} */
+main {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.page__title__container {
+  padding: 0em;
+}
+.page__title {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.layout__dark {
+  background-color: #0c111c;
+}
+
+.dark__theme {
+  background-color: #0c111c;
+  color: white !important;
+}
+/* scrollbar modification */
+/* width */
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-moz-scrollbar,
+*::-moz-scrollbar {
+  width: 10px;
+}
+
+::-ms-scrollbar,
+*::-ms-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-moz-scrollbar-track,
+*::-moz-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-ms-scrollbar-track,
+*::-ms-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 99px;
+}
+
+::-moz-scrollbar-thumb,
+*::-moz-scrollbar-thumb {
+  background: #888;
+  border-radius: 99px;
+}
+
+::-ms-scrollbar-thumb,
+*::-ms-scrollbar-thumb {
+  background: #888;
+  border-radius: 99px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-moz-scrollbar-thumb:hover,
+*::-moz-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-ms-scrollbar-thumb:hover,
+*::-ms-scrollbar-thumb:hover {
+  background: #555;
+}

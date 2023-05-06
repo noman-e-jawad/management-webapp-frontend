@@ -1,0 +1,50 @@
+.wrapper {
+  width: inherit;
+  min-height: 70px;
+}
+.container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 6em;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  min-height: 70px;
+  background-color: var(--background-color-light);
+  transition: all 0.5s ease;
+  position: fixed;
+  width: inherit;
+  z-index: 99;
+}
+
+.containerDark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-light);
+}
+
+.welcomeText__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.welcomeText {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.role {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  column-gap: 0.2em;
+  color: var(--primary-color);
+}
+
+.rightContainer {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  height: 100%;
+}

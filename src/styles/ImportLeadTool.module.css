@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  gap: 2em;
+}
+
+.upload__button {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.import__button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.5em 1em;
+  border: none;
+  box-shadow: none;
+  outline: 0;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.info__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0em 7em;
+  align-items: center;
+}
+
+.info__container__left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.info__container__right {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.selectbox {
+  max-width: 100%;
+  width: max-content;
+  height: 30px;
+  padding: 0px 10px;
+  color: var(--text-color-dark);
+  border: 1px solid #cccccc;
+  border-radius: 0.3em;
+  box-shadow: none;
+}

@@ -1,0 +1,100 @@
+@value white: #fff;
+@value bg: #130e2d;
+@value light: #2b8f4e;
+@value dark: #2b8f4e;
+@value light-icon: #226d3c;
+@value text-sunny: #ffffff;
+@value dark-icon: #226d3c;
+@value transition: all 0.3s cubic-bezier(0.27, 0.74, 0.65, 0.68);
+@value light-box-shadow: inset -0.1rem -0.1rem 0.2rem 0.1rem light-icon,
+    inset 0.1rem 0.1rem 0.2rem 0.1rem light-icon;
+@value dark-box-shadow: inset -0.1rem -0.1rem 0.2rem 0.1rem light,
+    inset 0.1rem 0.1rem 0.2rem 0.1rem light;
+
+.theme_toggle {
+  width: 10rem;
+  height: 4rem;
+  background: light;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.7rem;
+  border-radius: 4rem;
+  gap: 1rem;
+  transition: transition;
+  box-shadow: light-box-shadow;
+  cursor: pointer;
+}
+.theme_icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: light-icon;
+  color: text-sunny;
+  transition: transition;
+  z-index: 3;
+}
+.theme_icon svg {
+  font-size: 2.2rem;
+}
+.theme_name {
+  color: text-sunny;
+  font-size: 1.4rem;
+  transition: transition;
+  animation: feadIn 0.8s ease-in-out forwards;
+  z-index: 1;
+}
+.theme_toggle.night {
+  background: dark;
+  transition: transition;
+  box-shadow: dark-box-shadow;
+}
+.theme_icon.active {
+  background: dark-icon;
+  transition: transition;
+  transform: translateX(5.5rem) rotate(0deg);
+  color: white;
+  box-shadow: 0 0 0.2rem light-icon;
+}
+.theme_icon.active + .theme_name {
+  color: white;
+  transform: translateX(-3rem);
+  transition: transition;
+  animation: feadIn 0.8s ease-in-out forwards;
+}
+@keyframes feadIn {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.theme_icon.day svg {
+  animation: sunny 0.6s ease-in-out forwards;
+}
+@keyframes sunny {
+  0% {
+    transform: scale(0.7) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(-257deg);
+  }
+}
+.theme_icon.active svg {
+  animation: rotate 0.5s ease-in-out forwards;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(257deg);
+  }
+}

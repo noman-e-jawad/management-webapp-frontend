@@ -1,0 +1,93 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 6em 0;
+}
+.wrapper.dark__wrapper {
+  background-color: #0c111c;
+}
+.formTitle h2 {
+  font-size: 2.6rem;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.row {
+  display: flex;
+  gap: 2em;
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.formControl label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-color-dark);
+}
+
+.formControl input,
+.formControl select {
+  max-width: 100%;
+  width: 500px;
+  height: 40px;
+  text-indent: 10px;
+  color: var(--text-color-dark);
+  border: 1px solid #cccccc;
+  border-radius: 0.3em;
+  box-shadow: none;
+}
+
+.formControl button {
+  padding: 1em 2em;
+}
+
+.formMessage {
+  margin-top: 5em;
+  background: #fee8e8;
+  padding: 1.2em 1em;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  color: #981313;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 0.3em;
+}
+
+.formMessage svg {
+  font-size: 1.8rem;
+}
+
+.success {
+  background-color: #dbffeb;
+  color: #167547;
+}
+/* Chrome, Safari, Edge, Opera */
+.formControl input::-webkit-outer-spin-button,
+.formControl input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.formControl input[type='number'] {
+  -moz-appearance: textfield;
+}
+.dark__wrapper .formTitle,
+.dark__wrapper .formContainer label,
+.dark__wrapper .formContainer input,
+.dark__wrapper .formContainer select {
+  color: #fff;
+}

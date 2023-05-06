@@ -1,0 +1,70 @@
+.wrapper {
+  width: 20%;
+}
+.container {
+  max-width: 25%;
+  width: 300px;
+  min-height: 100vh;
+  height: 100%;
+  display: block;
+  padding: 2em 0em;
+  background-color: var(--background-color-light);
+  transition: all 0.5s ease;
+  position: fixed;
+  z-index: 99;
+}
+
+.containerDark {
+  background-color: var(--background-color-dark);
+}
+
+.brand h2 {
+  padding: 0em 2em;
+  font-size: 2.4rem;
+  margin-bottom: 2em;
+}
+
+.menuItem {
+  gap: 1em;
+  display: flex;
+  padding: 1em 4em;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menuItem span {
+  font-size: 1.6rem;
+}
+.menuItem svg {
+  font-size: 1.8rem;
+}
+
+.menuItem:hover {
+  background-color: #d3e4d9;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menuItemDark:hover {
+  background-color: #213152;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submenu {
+  height: 0px;
+  margin-left: 10px;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+
+.open {
+  height: auto;
+  transition: height 0.5s ease-in;
+}
+
+.parentItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
