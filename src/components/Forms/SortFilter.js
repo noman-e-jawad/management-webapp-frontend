@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import {
-  getAllAgentNames,
   getAllCampaigns,
   getAllCenters,
+  getFiltersFromSalesleads,
   getSortSalesLeads,
 } from '../../http/http'
 import filterStyles from '../../styles/FilterStyles.module.css'
@@ -16,6 +16,7 @@ const SortFilter = ({ tableDatas }) => {
   const [centers, setCenters] = useState([])
   const [campaign, setCampaign] = useState([])
   const [agentName, setAgentName] = useState([])
+  const [zipCode, setZipCode] = useState([])
   const [message, setMessage] = useState('') // success massege
   const [reset, setReset] = useState(false) // <-- add reset state
 
@@ -33,11 +34,18 @@ const SortFilter = ({ tableDatas }) => {
       })
       .catch()
 
-    getAllAgentNames()
+    getFiltersFromSalesleads({ salesFilter: 'agentName' })
       .then((res) => {
         setAgentName(res.data)
       })
       .catch()
+
+    getFiltersFromSalesleads({ salesFilter: 'zipCode' })
+      .then((res) => {
+        setZipCode(res.data)
+      })
+      .catch()
+
     const fetchData = async () => {
       getSortSalesLeads(filterFormValues)
         .then((res) => {
@@ -68,9 +76,7 @@ const SortFilter = ({ tableDatas }) => {
     setFilterFormValues({})
     setReset(!reset) // <-- toggle reset state
   }
-  // console.log(filterFormValues)
 
-  // console.log(sortFilter)
   return (
     <>
       <div className={filterStyles.filter}>
@@ -105,6 +111,18 @@ const SortFilter = ({ tableDatas }) => {
               key={`agentName-${reset}`} // <-- add key to trigger re-render
               name="agentName"
               options={agentName.map((item) => ({
+                label: item,
+                value: item,
+              }))}
+              onChange={(event) => handleFilterChange(event)}
+            />
+          </div>
+          <div className={filterStyles.filterContainer}>
+            <h2>Zip Code</h2>
+            <SingleSelectDropdown
+              key={`zipCode-${reset}`} // <-- add key to trigger re-render
+              name="zipCode"
+              options={zipCode.map((item) => ({
                 label: item,
                 value: item,
               }))}

@@ -291,7 +291,9 @@ export const getSortSalesLeads = async (filterFormValues) => {
 }
 
 // get all agent-name
-export const getAllAgentNames = async () => {
-  const response = await axios.get('/api/sales-lead/agent-name')
+export const getFiltersFromSalesleads = async (salesFilter) => {
+  const response = await axios.get('/api/sales-lead/filters-from-saleslead', {
+    params: salesFilter,
+  })
   return response.data
 }
