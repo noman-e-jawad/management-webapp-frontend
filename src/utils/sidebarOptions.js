@@ -128,15 +128,9 @@ const menu = {
       },
     ],
   },
-  filter: {
-    icon: <HiDocument />,
-    title: 'Filtering',
-    to: '/filter-data',
-  },
 }
 
-const { dashboard, salesLeads, stuffs, clients, centers, campaigns, filter } =
-  menu
+const { dashboard, salesLeads, stuffs, clients, centers, campaigns } = menu
 
 export const adminOptions = [
   dashboard,
@@ -145,7 +139,6 @@ export const adminOptions = [
   clients,
   centers,
   campaigns,
-  filter,
 ]
 
 export const qcOptions = [dashboard, salesLeads.items[2], salesLeads.items[3]]

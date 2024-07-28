@@ -20,7 +20,8 @@
   width: 5px;
 }
 .contentTable {
-  width: 110vw;
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
   font-size: 0.9em;
   border-radius: 5px 5px 0 0;
