@@ -29,6 +29,7 @@
 .modal__content {
   padding: 1em;
   font-size: 1.6rem;
+  color: #000;
 }
 
 .button__container {

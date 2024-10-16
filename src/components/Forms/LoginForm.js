@@ -17,6 +17,7 @@ const LoginForm = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target
+    console.log(formValues)
     setFormValues((prev) => ({
       ...prev,
       [name.replace(/-([a-z])/g, (g) => g[1].toUpperCase())]: value,
@@ -25,23 +26,31 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log("this is handlesubmin")
     try {
       const response = await loginUser(formValues)
+      console.log("Response from loginUser:", response)
+
       const { success, data, message } = response
 
       if (success) {
         await login(data)
+
         setNotification({ type: 'success', text: message })
+
       } else {
         setNotification({ type: 'error', text: message })
+
       }
     } catch (error) {
       setNotification({ type: 'error', text: error.message })
+
     }
   }
 
+
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${styles.hFull}`}>
       <div className={styles.formTitle}>
         <h2>Login to Dashboard</h2>
       </div>

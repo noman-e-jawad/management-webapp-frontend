@@ -19,7 +19,7 @@ const ViewLeads = () => {
   return (
     <>
       <div className="page__title__container">
-        <h2 className="page__title">View Stuff</h2>
+        <h2 className="page__title">View Staff</h2>
       </div>
       {data && (
         <DataTable

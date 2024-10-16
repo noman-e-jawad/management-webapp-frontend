@@ -14,7 +14,7 @@
   transition: all 0.5s ease;
   position: fixed;
   width: inherit;
-  z-index: 99;
+  z-index: 98;
 }
 
 .containerDark {

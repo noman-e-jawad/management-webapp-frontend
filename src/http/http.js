@@ -48,6 +48,7 @@ export const requestPasswordReset = async (formValues) => {
 // create stuff
 export const createStuff = async (formValues) => {
   const response = await axios.post('/api/stuff/create', formValues)
+  console.log(formValues)
   return response.data
 }
 

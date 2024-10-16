@@ -26,6 +26,7 @@ const CreateStuffForm = ({ stuff }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log(formValues)
     try {
       if (stuff) {
         const response = await updateStuff(stuff._id, formValues)
@@ -62,7 +63,7 @@ const CreateStuffForm = ({ stuff }) => {
       }
     >
       <div className={styles.formTitle}>
-        <h2>{stuff ? 'Update Stuff' : 'Create Stuff'}</h2>
+        <h2>{stuff ? 'Update Staff' : 'Create Staff'}</h2>
       </div>
 
       <form onSubmit={handleSubmit} className={styles.formContainer}>

@@ -11,15 +11,15 @@ const StuffDetails = ({ stuff }) => (
       </div>
 
       <div className={styles.details__row}>
-        <p>Stuff Name</p>
+        <p>Staff Name</p>
         <p>{stuff.name}</p>
       </div>
       <div className={`${styles.details__row} ${styles.email__row}`}>
-        <p>Stuff Email</p>
+        <p>Staff Email</p>
         <p>{stuff.email.toLowerCase()}</p>
       </div>
       <div className={styles.details__row}>
-        <p>Stuff Role</p>
+        <p>Staff Role</p>
         <p>{stuff.role}</p>
       </div>
       <div className={styles.details__row}>

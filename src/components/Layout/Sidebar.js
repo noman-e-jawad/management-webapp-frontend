@@ -20,7 +20,7 @@ const Sidebar = ({ menu }) => {
           <h2
             className={theme.mode === 'dark' ? `${themeStyles.textLight} ` : ``}
           >
-            Janitorial
+            SkyManage
           </h2>
         </div>
 

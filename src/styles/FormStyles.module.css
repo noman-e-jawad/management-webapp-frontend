@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-top: 6em 0;
+  padding: 6em 0;
 }
 .wrapper.dark__wrapper {
   background-color: #0c111c;
@@ -90,4 +90,7 @@
 .dark__wrapper .formContainer input,
 .dark__wrapper .formContainer select {
   color: #fff;
+}
+.hFull{
+  height: 100vh;
 }
